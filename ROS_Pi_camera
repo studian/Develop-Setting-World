@@ -1,0 +1,49 @@
+http://chandong83.blog.me/220796742412 
+
+
+1. packages  설치
+
+opencv package 설치
+
+$sudo apt install ros-kinetic-opencv*
+ 
+
+raspberry pi cam package 설치 (ros 작업 공간이 ~/catkin_ws일 경우)
+
+$cd ~/catkin_ws/src
+$git clone https://github.com/fpasteau/raspicam_node
+$cd ..
+$catkin_make
+ 
+rviz package 설치
+
+$sudo apt install ros-kinetic-rviz
+
+
+2. 실행
+
+ros 코어 실행
+
+$roscore
+ 
+라즈 캠 실행
+
+$rosrun raspicam raspicam_raw_node
+
+topic 확인
+
+$rostopic list
+
+
+캡쳐 시작
+
+$rosservice call /camera/start_capture
+ 
+
+원 인식용 opencv_app node 시작
+
+$rosrun opencv_apps hough_circles image:=/camera/image
+ 
+rviz를 이용하여 확인하기
+
+$rviz
