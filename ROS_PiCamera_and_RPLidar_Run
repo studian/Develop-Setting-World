@@ -1,0 +1,13 @@
+
+# Lidar Run
+roslaunch rplidar_ros view_rplidar.launch
+
+# Camera Run
+rosrun raspicam raspicam_raw_node
+
+rostopic list
+
+rosservice call /camera/start_capture
+
+# in the rviz, add image
+# image -> topic -> setting
