@@ -10,7 +10,7 @@
 * OpenCV_Contrib : 3.2 
 
 ## Folder Path Structer
-![path_image](./opencv_path.png)
+![path_image](./opencv_path.jpg)
                               
 ## Build Order
 1. cmake build `VTK` library
