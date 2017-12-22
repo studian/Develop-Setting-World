@@ -8,8 +8,8 @@ sudo apt-get install ros-kinetic-ros-base
 sudo rosdep init
 rosdep update
 
-gedit ~/.bashrc (.bashrc 파일에 하기의 내용을 적고 저장한 후 파일을 닫는다.)
-`#-------------------------------------------------------------------------------
+gedit ~/.bashrc (.bashrc 파일에 하기의 내용을 적고 저장)
+```````````````````````````````````````````````````````````````````````
 # set ROS Kinetic
 source /opt/ros/kinetic/setup.bash
 source ~/catkin_ws/devel/setup.bash
@@ -22,7 +22,7 @@ export ROS_HOSTNAME=localhost
 alias cw='cd ~/catkin_ws'
 alias cs='cd ~/catkin_ws/src'
 alias cm='cd ~/catkin_ws && catkin_make'
-#-------------------------------------------------------------------------------`
+````````````````````````````````````````````````````````````````````````````
 
 source ~/.bashrc
 
