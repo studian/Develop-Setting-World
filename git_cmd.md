@@ -1,6 +1,3 @@
-# hello-world
-sample
-
 # < upload master >
 
 git init
