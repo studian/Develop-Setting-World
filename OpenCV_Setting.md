@@ -10,18 +10,7 @@
 * OpenCV_Contrib : 3.2 
 
 ## Folder Path Structer
-`C:\` - `LIB\` - `OpenCV\` - `opencv-3.2.0\` 
-           |         |        |
-           |         |        -------- `opencv_contrib-3.2.0\` 
-           |         |        |
-           |         |        -------- `build\` : make folder
-           |         - `eigen-eigen-5a0156e40feb\` 
-           |
-           ----- `PCL\` ---- `VTK\` 
-                              |
-                              -------- `VTK-8.0.1\` 
-                              | 
-                              -------- `build\` : make folder
+![path_image](./opencv_path.png)
                               
 ## Build Order
 1. cmake build `VTK` library
