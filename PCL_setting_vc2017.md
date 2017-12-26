@@ -7,7 +7,7 @@
 * C:\Program Files\PCL 1.8.1\3rdParty\Eigen\eigen3
 * C:\Program Files\PCL 1.8.1\3rdParty\FLANN\include
 * C:\Program Files\PCL 1.8.1\3rdParty\Qhull\include
-* C:\Program Files\PCL 1.8.1\3rdParty\VTK\include
+* C:\Program Files\PCL 1.8.1\3rdParty\VTK\include\vtk-8.0
 * C:\OpenNI2\Include
 
 #`LIB` PATH of Visual Studio 2017
