@@ -1,0 +1,6 @@
+docker login nvcr.io
+
+Username: $oauthtoken
+Password: bjA5YXViN2llYXRyb2FsbzZyaXA1ZjRycDE6YzFiMzBmYjMtOTgyNC00ZTYyLWIwODAtNjRkNmRmYzdiNzA1
+
+API Key: bjA5YXViN2llYXRyb2FsbzZyaXA1ZjRycDE6YzFiMzBmYjMtOTgyNC00ZTYyLWIwODAtNjRkNmRmYzdiNzA1
