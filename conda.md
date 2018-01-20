@@ -7,3 +7,5 @@ conda env create -f environment.yml
 conda env remove -n env_name
 
 conda env export > environment.yaml
+
+pip install scipy --upgrade
