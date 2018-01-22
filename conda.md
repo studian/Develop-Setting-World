@@ -1,6 +1,6 @@
 conda env list
 
-conda env create -n env_name python==3.5
+conda create -n env_name python=3.5
 
 conda env create -f environment.yml
 
