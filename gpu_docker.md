@@ -1,4 +1,5 @@
-## ubuntu 에서 도커 사용환경 만들기
+# Make Docker Env for GPU in ubuntu 
+
 1. install ubuntu
 2. install nvidia driver
 - https://hiseon.me/2018/02/17/install_nvidia_driver/
