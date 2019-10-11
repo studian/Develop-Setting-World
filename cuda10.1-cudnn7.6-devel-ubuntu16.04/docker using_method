@@ -1,0 +1,89 @@
+# ===================================================================================
+# 도커 활용 : 
+Ref site: 
+1) https://github.com/studian/Develop-Setting-World/blob/master/gpu_docker.md
+2) https://m.blog.naver.com/PostView.nhn?blogId=complusblog&logNo=220974632766&proxyReferer=https%3A%2F%2Fwww.google.com%2F
+3) https://hub.docker.com/r/dash00/tensorflow-python3-jupyter/?source=post_page-----d93fbc99e154----------------------
+# ===================================================================================
+
+1. [해결방법] Solving Docker permission denied while trying to connect to the Docker daemon socket
+   docker가 root 계정으로 설치 되었을때 root 계정이 아닌 계정으로 docker를 실행하고자 하면 제목과 같은 에러가 발생할 때가 있다.
+$ sudo usermod -a -G docker $USER
+$ sudo service docker restart
+$ sudo reboot
+
+2. Docker build - Dockerfile을 이용해서 이미지 생성하기
+$ docker build -t 이미지이름 ./
+$ docker build -t img-cuda10.0-cudnn7.6-py3.6 ./
+
+3. 컨테이너 만들기
+$ docker run -d -it --name kyoo_cuda10.0_cudnn7.6_py3.6\
+    --env="DISPLAY" \
+    --env="QT_X11_NO_MITSHM=1" \
+    --volume="/tmp/.X11-unix:/tmp/.X11-unix:rw" \
+    -env="XAUTHORITY=$XAUTH" \
+    --volume="$XAUTH:$XAUTH" \
+    --runtime=nvidia \
+    -v /home/kyoo/DataHDD:/mnt \
+    -e DISPLAY=$DISPLAY \
+    img-cuda10.0-cudnn7.6-py3.6 \
+    /bin/bash
+
+4. 컨테이너 서비스 실행 
+$ docker start -a kyoo_cuda10.0_cudnn7.6_py3.6
+
+5. 컨테이너 실행
+$ docker exec -it kyoo_cuda10.0_cudnn7.6_py3.6 /bin/bash
+
+6. 컨테이너 stop
+$ docker stop kyoo_cuda10.0_cudnn7.6_py3.6
+
+7. 컨테이너 restart
+$ docker restart kyoo_cuda10.0_cudnn7.6_py3.6
+
+8. 동작중인 컨테이너 확인
+$ docker ps
+
+9. 모든 컨테이너 확인
+$ docker ps -a
+
+10. 컨테이너 삭제 (복수개도 가능)
+$ docker rm 컨테이너id
+$ docker rm 컨테이너id, 컨테이너id, 컨테이너id
+
+11. 이미지 확인
+$ docker images
+
+12. 이미지 삭제 
+$ docker rmi 이미지id
+
+13. 컨테이너를 삭제하기 전에 이미지를 삭제할 경우 (-f 옵션을 붙이면 컨테이너도 강제삭제)
+$ docker rmi -f 이미지id
+
+# ===================================================================================
+# 기본적으로 설치해야되는 pip 패키지
+# ===================================================================================
+
+1. pip install
+pip install Pillow numpy graphviz scikit-image scikit-learn scipy tqdm numpy matplotlib
+pip install opencv-python opencv-contrib-python
+pip install tensorflow-gpu
+pip install keras
+apt-get install libsm6 libxrender1 libfontconfig1
+pip install --upgrade pip 
+pip install --no-cache-dir\
+pip install torch==0.4.1 torchvision
+
+# ===================================================================================
+# In docker environment, run jupyter notebook
+# ===================================================================================
+
+$ jupyter notebook --allow-root --ip 172.17.0.2
+
+# ===================================================================================
+# In docker environment, chmod 'docker locked file or directory'
+# ===================================================================================
+
+$ chmod a+rwx "~~~~"
+
+
