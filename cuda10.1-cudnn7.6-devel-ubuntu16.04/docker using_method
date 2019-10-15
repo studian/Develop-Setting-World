@@ -4,6 +4,8 @@ Ref site:
 1) https://github.com/studian/Develop-Setting-World/blob/master/gpu_docker.md
 2) https://m.blog.naver.com/PostView.nhn?blogId=complusblog&logNo=220974632766&proxyReferer=https%3A%2F%2Fwww.google.com%2F
 3) https://hub.docker.com/r/dash00/tensorflow-python3-jupyter/?source=post_page-----d93fbc99e154----------------------
+4) https://moordev.tistory.com/173 # docker 에서 gui 사용하기
+5)
 # ===================================================================================
 
 1. [해결방법] Solving Docker permission denied while trying to connect to the Docker daemon socket
