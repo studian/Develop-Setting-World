@@ -26,6 +26,8 @@ $ docker run -d -it --name kyoo_cuda10.0_cudnn7.6_py3.6\
     --runtime=nvidia \
     -v /home/kyoo/DataHDD:/mnt \
     -e DISPLAY=$DISPLAY \
+    -p 8888:8888 \
+    -p 6006:6006 \
     img-cuda10.0-cudnn7.6-py3.6 \
     /bin/bash
 
