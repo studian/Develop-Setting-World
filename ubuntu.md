@@ -25,6 +25,11 @@ blkid
 vi /etc/fstab
 UUID=7514F3C548DC857A   /mnt/data1      ntfs    defaults,locale=ko_KR.UTF-8     0       0
 ```
+
+```
+#/dev/disk/by-uuid/6ce0f131-e804-4ad8-a3eb-5b8ec9ec23e9 /home/user/rs_postdoc auto nosuid,nodev,nofail,x-gvfs-show 0 0
+#/dev/disk/by-uuid/424a215a-82a9-46fd-a8ff-f7f331b2d02e /home/user/rs_phd auto nosuid,nodev,nofail,x-gvfs-show 0 0
+```
 # 마운트
 ```bash
 mount -a
