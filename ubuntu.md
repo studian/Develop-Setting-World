@@ -34,3 +34,14 @@ UUID=7514F3C548DC857A   /mnt/data1      ntfs    defaults,locale=ko_KR.UTF-8     
 ```bash
 mount -a
 ```
+# ubuntu 런처 위치 변경
+* 런처를 왼쪽에 위치함
+```bash
+gsettings set com.canonical.Unity.Launcher launcher-position Left 
+```
+* 런처를 아래쪽에 위치함
+```bash
+gsettings set com.canonical.Unity.Launcher launcher-position Bottom
+```
+
+출처: https://techlog.gurucat.net/302 [하얀쿠아의 이것저것 만들기 Blog]
