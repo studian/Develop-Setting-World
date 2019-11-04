@@ -43,5 +43,3 @@ gsettings set com.canonical.Unity.Launcher launcher-position Left
 ```bash
 gsettings set com.canonical.Unity.Launcher launcher-position Bottom
 ```
-
-출처: https://techlog.gurucat.net/302 [하얀쿠아의 이것저것 만들기 Blog]
