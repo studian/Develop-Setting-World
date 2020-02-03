@@ -36,6 +36,7 @@ Failed to import pydot. You must install pydot and graphviz for `pydotprint` to 
 ## Solution
 ```
 sudo apt-get install graphviz
+pip install pydot pydotplus
 ```
 
 
