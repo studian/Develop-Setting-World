@@ -1,4 +1,4 @@
-# Trainable parameter setting in layer
+# 1. Trainable parameter setting in layer
 ## trainable=False
 * To "freeze" a layer means to exclude it from training, i.e. its weights will never be updated. 
 * This is useful in the context of fine-tuning a model, or using fixed embeddings for a text input.
@@ -28,7 +28,7 @@ trainable_model.compile(optimizer='rmsprop', loss='mse')
 frozen_model.fit(data, labels)  # this does NOT update the weights of `layer`
 trainable_model.fit(data, labels)  # this updates the weights of `layer`
 ```
-# Issue with plot_model in keras and pydot
+# 2. Issue with plot_model in keras and pydot
 ## Error Massages
 ```
 Failed to import pydot. You must install pydot and graphviz for `pydotprint` to work.
