@@ -28,5 +28,15 @@ trainable_model.compile(optimizer='rmsprop', loss='mse')
 frozen_model.fit(data, labels)  # this does NOT update the weights of `layer`
 trainable_model.fit(data, labels)  # this updates the weights of `layer`
 ```
+# Issue with plot_model in keras and pydot
+## Error Massages
+```
+Failed to import pydot. You must install pydot and graphviz for `pydotprint` to work.
+```
+## Solution
+```
+sudo apt-get install graphviz
+```
+
 
 # added
