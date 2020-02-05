@@ -43,3 +43,7 @@ gsettings set com.canonical.Unity.Launcher launcher-position Left
 ```bash
 gsettings set com.canonical.Unity.Launcher launcher-position Bottom
 ```
+
+# E: Unable to fetch some archives, maybe run apt-get update or try with --fix-missing? 에러 
+참고: https://twpower.github.io/99-change-apt-get-source-server
+
