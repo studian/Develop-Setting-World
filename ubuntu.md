@@ -45,5 +45,11 @@ gsettings set com.canonical.Unity.Launcher launcher-position Bottom
 ```
 
 # E: Unable to fetch some archives, maybe run apt-get update or try with --fix-missing? 에러 
-참고: https://twpower.github.io/99-change-apt-get-source-server
+* 참고: https://twpower.github.io/99-change-apt-get-source-server
+* 참고: https://chonnom.com/bbs/board.php?bo_table=B19&wr_id=472
+* 참고: https://chonnom.com/bbs/board.php?bo_table=B19&wr_id=469
+```
+sudo sed -i 's/kr.archive.ubuntu.com/ftp.daum.net/g' /etc/apt/sources.list
+```
+
 
