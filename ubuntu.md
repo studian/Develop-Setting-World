@@ -66,9 +66,6 @@ $ sudo apt install -y cifs-utils
 
 ## 2. mount 명령어로 삼바하드 세팅
 * $ sudo mount -t cifs //삼바서버IP/경로 내PC의마운트경로 -o user=유저ID,password=유저비밀번호,uid=1000,gid=1000
-```
-$ sudo mount -t cifs //165.229.90.5/MSP /home/user/rs_postdoc/MSP_NAS/ -o user=admin,password=msppassword,uid=1000,gid=1000
-```
 
 ## 3. 부팅하더라도 mount 되어있게 세팅
 
@@ -76,8 +73,6 @@ $ sudo mount -t cifs //165.229.90.5/MSP /home/user/rs_postdoc/MSP_NAS/ -o user=a
 * //삼바서버IP/경로 내PC의마운트경로 cifs user=유저ID,password=유저비밀번호,uid=1000,gid=1000 0 0
 ```
 $ sudo gedit /etc/fstab
-
-//165.229.90.5/MSP /home/user/rs_postdoc/MSP_NAS cifs user=admin,password=msppassword,uid=1000,gid=1000 0 0
 ```
 
 ### 2) 수정된 /etc/fstab 적용
