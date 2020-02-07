@@ -20,6 +20,10 @@
 
 4) install nvidia-docker
 - reference site(korean): https://hiseon.me/2018/02/19/install-docker/
+* Got permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock: Get http://%2Fvar%2Frun%2Fdocker.sock/v1.39/ 에러 계속 뜰때
+```
+sudo chmod 666 /var/run/docker.sock
+```
 
 5) install nvidia-docker 2.0 
 - reference site(korean): http://haanjack.github.io/docker/2017/12/01/nvidia-docker-ngc.html
