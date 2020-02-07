@@ -183,3 +183,38 @@ WantedBy=multi-user.target
 ```
 $sudo systemctl enable cuda_docker
 ```
+
+# 딥러닝 환경 구축을 위해 docker 컨테이너 실행 후 '기본' 세팅 라이브러리
+```
+# pip install Pillow numpy graphviz scikit-image scikit-learn scipy tqdm numpy matplotlib
+# pip install opencv-python opencv-contrib-python
+# apt-get install libsm6 libxrender1 libfontconfig1
+# pip install --upgrade pip 
+# pip install --no-cache-dir\
+```
+
+# 딥러닝 환경 구축을 위해 docker 컨테이너 실행 후 '선택적' 세팅 라이브러리
+```
+# pip install tensorflow-gpu
+# pip install keras
+# pip install torch==0.4.1 torchvision
+```
+
+# docker 에서 jupyter notebook 실행
+```
+# jupyter notebook --allow-root --ip 172.17.0.2
+```
+
+# docker 환경에서 파일/폴더 생성 시 host 환경에서 열기/수정 권한 문제 해결
+* docker 환경에서 명령어 실행
+* 하위 폴더까지 적용 시 -Rf 옵션 넣기
+```
+# chmod -Rf a+rwx '폴더이름 또는 파일이름'
+```
+```
+# chmod -Rf a+rwx Results_*
+```
+
+
+
+
