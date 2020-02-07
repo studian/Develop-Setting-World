@@ -80,5 +80,8 @@ $ sudo gedit /etc/fstab
 $ sudo mount -a
 ```
 
+# 우분투(Ubuntu) 16.04 한글 키보드 설치
+* https://snowdeer.github.io/linux/2018/01/21/ubuntu-16p04-install-korean-keyboard/
+
 
 
