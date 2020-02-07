@@ -24,6 +24,29 @@
 5) install nvidia-docker 2.0 
 - reference site(korean): http://haanjack.github.io/docker/2017/12/01/nvidia-docker-ngc.html
 
+* nvidia-docker 2.0 설치
+```
+$ sudo usermod -aG docker $USER
+$ curl -s -L https://nvidia.github.io/nvidia-docker/gpgkey | \
+  sudo apt-key add -
+$ curl -s -L https://nvidia.github.io/nvidia-docker/ubuntu16.04/amd64/nvidia-docker.list | \
+  sudo tee /etc/apt/sources.list.d/nvidia-docker.list
+$ sudo apt-get update
+$ sudo apt-get install -y nvidia-docker2
+$ sudo pkill -SIGHUP dockerd
+$ docker volume ls -q -f driver=nvidia-docker | xargs -r -I{} -n1 docker ps -q -a -f volume={} | xargs -r docker rm -f
+$ sudo apt-get purge nvidia-docker
+```
+
+* docker 동작 확인
+```
+$ docker pull nvidia/cuda
+
+$ docker run --runtime=nvidia --rm -ti nvidia/cuda nvidia-smi
+
+$ nvidia-docker run --rm -ti nvidia/cuda nvidia-smi
+```
+
 5) download docker image 
 - reference site: https://hub.docker.com/
 ```
