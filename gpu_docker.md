@@ -51,11 +51,15 @@ $ sudo reboot
 * Dockerfile이 있는 폴더 안에서 실행 시
 ```
 $ docker build -t 사용할_docker_이미지_이름 ./
+```
+```
 $ docker build -t img-cuda10.1-cudnn7.6-py3.6 ./
 ```
 * Dockerfile이 있는 폴더의 경로를 알때 실행 시
 ```
 $ docker build -t 사용할_docker_이미지_이름 Dockerfile-PATH
+```
+```
 $ docker build -t img-cuda10.1-cudnn7.6-py3.6 /home/user/cuda10.1-cudnn7.6-devel-ubuntu16.04
 ```
 
@@ -93,24 +97,32 @@ $ docker run -d -it --name ctn_cuda10.1_cudnn7.6_py3.6\
 3) 컨테이너 서비스 실행 
 ```
 $ docker start -a 컨테이너_이름
+```
+```
 $ docker start -a ctn_cuda10.1_cudnn7.6_py3.6
 ```
 
 4) 컨테이너 실행
 ```
 $ docker exec -it 컨테이너_이름 /bin/bash 
+```
+```
 $ docker exec -it ctn_cuda10.1_cudnn7.6_py3.6 /bin/bash
 ```
 
 5) 컨테이너 stop
 ```
 $ docker stop 컨테이너_이름
+```
+```
 $ docker stop ctn_cuda10.1_cudnn7.6_py3.6
 ```
 
 6) 컨테이너 restart
 ```
 $ docker restart 컨테이너_이름
+```
+```
 $ docker restart ctn_cuda10.1_cudnn7.6_py3.6
 ```
 
