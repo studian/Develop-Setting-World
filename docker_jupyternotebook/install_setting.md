@@ -26,8 +26,8 @@ Out[2]: 'sha1:f24baff49ac5:863dd2ae747212ede58125302d227f0ca7b12bb3'
 
 4) jupyter_notebook_config.py 파일 수정
 * 경로는 다음과 같음: /home/login이름/.jupyter/jupyter_notebook_config.py
-* 수정할 파일내용은 다음 파일 참고: ./jupyter_notebook_config.py
-https://github.com/studian/Develop-Setting-World/blob/master/docker_jupyternotebook/jupyter_notebook_config.py
+* 수정할 파일내용은 다음 파일 참고: [jupyter_notebook_config.py](https://github.com/studian/Develop-Setting-World/blob/master/docker_jupyternotebook/jupyter_notebook_config.py)
+
 ```
 c = get_config()
 c.NotebookApp.allow_origin = '*'
