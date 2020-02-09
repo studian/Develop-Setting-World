@@ -7,6 +7,8 @@
 * https://yahwang.github.io/posts/40 # docker에서 PC 그래픽과 연결해 tensorflow-gpu 실행하기
 * http://haanjack.github.io/docker/2017/12/01/nvidia-docker-ngc.html # nvidia-docker 2.0 
 * https://pbj0812.tistory.com/134 # [Docker] 설치, 다운로드, 실행, jupyter notebook 연동, 삭제, 기타 등등
+* https://blog.naver.com/cheeryun/221602199037 # docker 활용
+* https://blog.naver.com/cheeryun/221602289741 # docker 활용
 
 # Make Docker Env for GPU in ubuntu 
 
