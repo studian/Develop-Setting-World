@@ -9,6 +9,7 @@
 * https://pbj0812.tistory.com/134 # [Docker] 설치, 다운로드, 실행, jupyter notebook 연동, 삭제, 기타 등등
 * https://blog.naver.com/cheeryun/221602199037 # docker 활용
 * https://blog.naver.com/cheeryun/221602289741 # docker 활용
+* https://conservative-vector.tistory.com/entry/docker%EC%97%90%EC%84%9C-%EC%BB%A8%ED%85%8C%EC%9D%B4%EB%84%88-gui-%EC%8B%A4%ED%96%89%ED%95%98%EA%B8%B0 # docker display gui
 
 # Make Docker Env for GPU in ubuntu 
 
@@ -244,6 +245,16 @@ $sudo systemctl enable cuda_docker
 # chmod -Rf a+rwx Results_*
 ```
 
+# docker에서 gui 사용
+* 도커 컨테이너 만들때
+```
+--volume /tmp/.X11-unix:/tmp/.X11-unix:ro
+-e DISPLAY=unix$DISPLAY
+```
+* 도커 컨테이너 사용시(컨테이너 실행 커맨드 말고)
+```
+$ xhost +local:docker
+```
 
 
 
