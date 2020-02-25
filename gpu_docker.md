@@ -192,6 +192,13 @@ $ docker rmi -f 이미지id
 $ docker container ls # 컨테이너 이미지 이름, 컨테이너 이름 확인
 ```
 
+# Docker image 만들기
+
+1) 만들어져있는 컨테이너를 이미지로 생성
+```
+$ docker commit container_name 
+```
+
 ======================================================================
 
 ## auto starting : 굳이 이 세팅 할 필요 없음
