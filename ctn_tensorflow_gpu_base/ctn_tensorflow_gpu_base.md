@@ -19,3 +19,7 @@ $ docker run -d -it --name ctn_tensorflow_gpu_base\
     studian/tensorflow_gpu:1.13.1 \
     /bin/bash
 ```
+* Execute gui application 
+```
+$ xhost +local:docker
+```
