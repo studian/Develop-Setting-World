@@ -210,10 +210,27 @@ $ docker images
 $ docker tag 이미지_ID 새로운_이미지_이름
 ```
 
-4) 1)~3) 번 과정 한번에 실행 명령어
+4) 1)~3) 번 과정 한번에 실행 명령어 (이 방법으로 하자!!)
 ```
-$ docker commit container_name 새로운_이미지_이름
+$ docker commit container_name dockerhub_id/새로운_이미지_이름:tag
 ```
+```
+$ docker commit container_name studian/tensorflow_gpu:1.13.1
+```
+
+5) docker hub login
+```
+$ docker login
+```
+
+6) docker hub upload
+```
+$ docker push 업로드할_도커_이미지이름
+```
+```
+$ docker push studian/tensorflow_gpu:1.13.1
+```
+
 
 ======================================================================
 
