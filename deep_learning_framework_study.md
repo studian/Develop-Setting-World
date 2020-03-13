@@ -17,26 +17,27 @@
 
 ### 1. random seed
 
-* cpu에서 지정된 random number 확인 하는 코드
+* cpu에서 지정된 random number 확인 하는 코드:
 ```
 print("CPU Random Seed :", torch.initial_seed())
 ```
 
-* GPU에서 지정된 random number 확인 하는 코드
+* GPU에서 지정된 random number 확인 하는 코드:
 ```
 print("CUDA Random Seed :", torch.cuda.initial_seed())
 ```
 
-* 딥러닝은 weight initialization 할 때 random number가 많이 쓰임
-* 실험 결과를 재구현 하거나 개선이 되었는지 비교해보려면, 실험을 다시 할 때 동일한 random number를 사용해야 함
-* 따라서, 다음의 코드로 random seed를 적용
+* 딥러닝은 weight initialization 할 때 random number가 많이 쓰임.
+* 실험 결과를 재구현 하거나 개선이 되었는지 비교해보려면, 
+* 실험을 다시 할 때 동일한 random number를 사용해야 함.
+* 따라서, 다음의 코드로 random seed를 적용.
 
-* cpu 사용시
+* cpu 사용시:
 ```
 torch.manual_seed(139083498)
 ```
 
-* gpu 사용시
+* gpu 사용시:
 ```
 torch.cuda.manual_seed_all(3480249583742974)
 ```
