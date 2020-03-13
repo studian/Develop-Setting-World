@@ -8,7 +8,7 @@
 - https://www.tensorflow.org/js/demos?hl=ko
 - https://www.tensorflow.org/js/tutorials
 
-3. tensorflow를 `모바일(안드로이드/맥)`에서 사용하려면?
+3. tensorflow를 `모바일(Android/iOS/Raspberry Pi)`에서 사용하려면?
 * TensorFlow Lite 사용
 * 예제 및 데모
 - https://www.tensorflow.org/lite
