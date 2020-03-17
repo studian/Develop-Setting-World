@@ -1,3 +1,45 @@
+### 설치: How To Install Node.js on Ubuntu 16.04
+* 참고싸이트: https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-ubuntu-16-04
+* 12.16.1로 설치
+
+1. 기본 설치 및 버전 확인
+```
+$ sudo apt-get update
+$ sudo apt-get install nodejs
+$ sudo apt-get install npm
+$ nodejs -v
+```
+2. 업그레이드 후 12.x 버전 확인
+```
+$ cd ~
+$ curl -sL https://deb.nodesource.com/setup_12.x -o nodesource_setup.sh
+$ sudo bash nodesource_setup.sh
+$ sudo apt-get install nodejs
+$ nodejs -v
+```
+3. nvm 업그레이드 환경 설치
+```
+$ npm -v
+$ sudo apt-get install build-essential
+$ sudo apt-get update
+$ sudo apt-get install build-essential libssl-dev
+$ curl -sL https://raw.githubusercontent.com/creationix/nvm/v0.33.8/install.sh -o install_nvm.sh
+$ bash install_nvm.sh
+$ source ~/.profile
+```
+4. nvm 최신 버전 확인
+```
+$ nvm ls-remote
+```
+5. 앞에서 설치한 node 버전과 동일한 LTS 버전 확인하여 설치(2020.03.17 기준 12.16.1 버전임)
+```
+$ nvm install 12.16.1
+$ nvm use 12.16.1
+$ node -v
+$ nvm alias default 12.16.1
+$ npm install express
+```
+
 ### Error
 
 1. /usr/bin/env: ‘node’: No such file or directory
