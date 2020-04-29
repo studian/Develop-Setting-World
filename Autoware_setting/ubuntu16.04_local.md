@@ -1,7 +1,8 @@
 * reference of install ROS-Kinetic-full: 
 * reference of install cuda 9.0: https://yangcha.github.io/CUDA90/
 * reference of install autoware: https://gitlab.com/autowarefoundation/autoware.ai/autoware/-/wikis/Source-Build
-* reference of run autoware demo: https://gitlab.com/autowarefoundation/autoware.ai/autoware/-/wikis/ROSBAG-Demo
+* reference of run autoware demo(1): https://gitlab.com/autowarefoundation/autoware.ai/autoware/-/wikis/ROSBAG-Demo
+* reference of run autoware demo(2): https://www.youtube.com/watch?v=OWwtr_71cqI&list=PLMV3EZ9zjNbIkOWvjaY2iU8LVC-pUQMOU&index=8
 
 ### 1. install ROS-Kinetic-full on Ubuntu 16.04
 
