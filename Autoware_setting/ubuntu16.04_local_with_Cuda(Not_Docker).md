@@ -3,7 +3,7 @@
 * reference of install ROS-Kinetic-full(1): http://wiki.ros.org/kinetic/Installation/Ubuntu
 * reference of install ROS-Kinetic-full(2): https://redisle.tistory.com/7
 
-* install ROS Kinetic for Ubuntu 16.04
+Install ROS Kinetic for Ubuntu 16.04
 ```
 $ sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
 $ sudo apt-key adv --keyserver hkp://ha.pool.sks-keyservers.net:80 --recv-key 421C365BD9FF1F717815A3895523BAEEB01FA116
@@ -84,17 +84,17 @@ $ source ~/.bashrc
 
 * reference of install autoware: https://gitlab.com/autowarefoundation/autoware.ai/autoware/-/wikis/Source-Build
 
-* Create a workspace
+Create a workspace
 ```
 $ mkdir -p autoware.ai/src
 $ cd autoware.ai
 ```
-* Download the workspace configuration for Autoware.AI. 
+Download the workspace configuration for Autoware.AI. 
 * For the 1.12.0 release:
 ```
 $ wget -O autoware.ai.repos "https://gitlab.com/autowarefoundation/autoware.ai/autoware/raw/1.12.0/autoware.ai.repos?inline=false"
 ```
-* For newer releases, replace 1.12.0 with the version you want to install.
+For newer releases, replace 1.12.0 with the version you want to install.
 * For the master version (bleeding edge):
 ```
 $ wget -O autoware.ai.repos "https://gitlab.com/autowarefoundation/autoware.ai/autoware/raw/master/autoware.ai.repos?inline=false"
@@ -103,12 +103,12 @@ $ wget -O autoware.ai.repos "https://gitlab.com/autowarefoundation/autoware.ai/a
 ```
 $ vcs import src < autoware.ai.repos
 ```
-* Install dependencies using rosdep.
+Install dependencies using rosdep.
 ```
 $ rosdep update
 $ rosdep install -y --from-paths src --ignore-src --rosdistro $ROS_DISTRO
 ```
-* Compile the workspace
+Compile the workspace
 * With CUDA support
 ```
 $ AUTOWARE_COMPILE_WITH_CUDA=1 colcon build --cmake-args -DCMAKE_BUILD_TYPE=Release
@@ -126,7 +126,7 @@ $ colcon build --cmake-args -DCMAKE_BUILD_TYPE=Release
 
 #### Demo data
 
-* This demo will need the given 3D map and ROSBAG sample data. Please download the following sample data before running the demo.
+This demo will need the given 3D map and ROSBAG sample data. Please download the following sample data before running the demo.
 * Download the sample 3D pointcloud/vector map data. 
 ```
 $ wget https://autoware-ai.s3.us-east-2.amazonaws.com/sample_moriyama_data.tar.gz
@@ -144,11 +144,11 @@ $ wget https://autoware-ai.s3.us-east-2.amazonaws.com/sample_moriyama_150324.bag
 
 #### Demo run
 
-* Assumptions
+Assumptions
 * Autoware built from source: the demo data and rosbag have been downloaded into the Downloads folder.
 * Autoware run from docker image: the demo data and rosbag have been downloaded into the shared_dir folder within the host.
 
-* Create the .autoware directory and extract the demo data inside.
+* Create the `.autoware` directory and extract the demo data inside.
 ```
 $ cd ~
 $ mkdir .autoware
