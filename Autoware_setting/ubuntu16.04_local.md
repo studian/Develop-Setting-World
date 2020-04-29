@@ -1,10 +1,6 @@
-* reference of install ROS-Kinetic-full: 
-* reference of install cuda 9.0: https://yangcha.github.io/CUDA90/
-* reference of install autoware: https://gitlab.com/autowarefoundation/autoware.ai/autoware/-/wikis/Source-Build
-* reference of run autoware demo(1): https://gitlab.com/autowarefoundation/autoware.ai/autoware/-/wikis/ROSBAG-Demo
-* reference of run autoware demo(2): https://www.youtube.com/watch?v=OWwtr_71cqI&list=PLMV3EZ9zjNbIkOWvjaY2iU8LVC-pUQMOU&index=8
-
 ### 1. install ROS-Kinetic-full on Ubuntu 16.04
+
+* reference of install ROS-Kinetic-full: 
 
 * System dependencies for Ubuntu 16.04 / Kinetic
 ```
@@ -15,6 +11,9 @@ $ pip3 install -U setuptools
 ```
 
 ### 2. install cuda 9.0 on Ubuntu 16.04
+
+* reference of install cuda 9.0: https://yangcha.github.io/CUDA90/
+* reference of install autoware: https://gitlab.com/autowarefoundation/autoware.ai/autoware/-/wikis/Source-Build
 
 The latest version of CUDA is 9.1. However some deep learning frameworks are not yet ready for CUDA 9.1. The installation script of CUDA-9.1 is very similar to this one.
 
@@ -54,6 +53,8 @@ LD_LIBRARY_PATH=/usr/local/cuda-9.0/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
 
 ### 3. install Autoware 1.12.0 with cuda on Ubuntu 16.04 (How to build For 1.12.0 and Newer)
 
+* reference of install autoware: https://gitlab.com/autowarefoundation/autoware.ai/autoware/-/wikis/Source-Build
+
 * Create a workspace
 ```
 $ mkdir -p autoware.ai/src
@@ -89,6 +90,9 @@ $ colcon build --cmake-args -DCMAKE_BUILD_TYPE=Release
 ```
 
 ### 4. Run ROSBAG Demo of Autoware 1.12.0 with cuda on Ubuntu 16.04
+
+* reference of run autoware demo(1): https://gitlab.com/autowarefoundation/autoware.ai/autoware/-/wikis/ROSBAG-Demo
+* reference of run autoware demo(2): https://www.youtube.com/watch?v=OWwtr_71cqI&list=PLMV3EZ9zjNbIkOWvjaY2iU8LVC-pUQMOU&index=8
 
 #### Demo data
 
