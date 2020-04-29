@@ -6,6 +6,14 @@
 
 ### 1. install ROS-Kinetic-full on Ubuntu 16.04
 
+* System dependencies for Ubuntu 16.04 / Kinetic
+```
+$ sudo apt-get update
+$ sudo apt-get install -y python-catkin-pkg python-rosdep ros-$ROS_DISTRO-catkin gksu
+$ sudo apt-get install -y python3-pip python3-colcon-common-extensions python3-setuptools python3-vcstool
+$ pip3 install -U setuptools
+```
+
 ### 2. install cuda 9.0 on Ubuntu 16.04
 
 The latest version of CUDA is 9.1. However some deep learning frameworks are not yet ready for CUDA 9.1. The installation script of CUDA-9.1 is very similar to this one.
