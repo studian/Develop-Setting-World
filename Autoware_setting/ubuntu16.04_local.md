@@ -1,6 +1,7 @@
 * reference of install ROS-Kinetic-full: 
 * reference of install cuda 9.0: https://yangcha.github.io/CUDA90/
-* reference of autoware: https://gitlab.com/autowarefoundation/autoware.ai/autoware/-/wikis/Source-Build
+* reference of install autoware: https://gitlab.com/autowarefoundation/autoware.ai/autoware/-/wikis/Source-Build
+* reference of run autoware demo: https://gitlab.com/autowarefoundation/autoware.ai/autoware/-/wikis/ROSBAG-Demo
 
 ### 1. install ROS-Kinetic-full on Ubuntu 16.04
 
@@ -76,4 +77,46 @@ $ AUTOWARE_COMPILE_WITH_CUDA=1 colcon build --cmake-args -DCMAKE_BUILD_TYPE=Rele
 * Without CUDA Support
 ```
 $ colcon build --cmake-args -DCMAKE_BUILD_TYPE=Release
+```
+
+### 4. Run ROSBAG Demo of Autoware 1.12.0 with cuda on Ubuntu 16.04
+
+#### Demo data
+
+* This demo will need the given 3D map and ROSBAG sample data. Please download the following sample data before running the demo.
+* Download the sample 3D pointcloud/vector map data. 
+```
+$ wget https://autoware-ai.s3.us-east-2.amazonaws.com/sample_moriyama_data.tar.gz
+```
+* Download the sample data (LiDAR: VELODYNE HDL-32E, GNSS: JAVAD GPS RTK Delta 3) in ROSBAG format or ROSBAG2 format.
+```
+$ wget https://autoware-ai.s3.us-east-2.amazonaws.com/sample_moriyama_150324.tar.gz 
+```
+* or (Mirror)
+```
+$ wget https://autoware-ai.s3.us-east-2.amazonaws.com/sample_moriyama_150324.bag2.tar.gz
+```
+* Want more data?
+* Once the demo goes well, you can visit ROSBAG STORE to get more data. Please also consider your contribution to this data sharing service by uploading your ROSBAG data.
+
+#### Demo run
+
+* Assumptions
+* Autoware built from source: the demo data and rosbag have been downloaded into the Downloads folder.
+* Autoware run from docker image: the demo data and rosbag have been downloaded into the shared_dir folder within the host.
+
+* Create the .autoware directory and extract the demo data inside.
+```
+$ cd ~
+$ mkdir .autoware
+$ cd .autoware
+$ cp ~/Downloads/sample_moriyama_* .
+$ tar zxfv sample_moriyama_150324.tar.gz
+$ tar zxfv sample_moriyama_data.tar.gz
+```
+* Run Autoware For Autoware version 1.12.0 and Newer
+```
+$ cd autoware.ai
+$ source install/setup.bash
+$ roslaunch runtime_manager runtime_manager.launch
 ```
