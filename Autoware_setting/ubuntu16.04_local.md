@@ -1,6 +1,25 @@
 ### 1. install ROS-Kinetic-full on Ubuntu 16.04
 
-* reference of install ROS-Kinetic-full: 
+* reference of install ROS-Kinetic-full(1): http://wiki.ros.org/kinetic/Installation/Ubuntu
+* reference of install ROS-Kinetic-full(2): https://redisle.tistory.com/7
+
+* install ROS Kinetic for Ubuntu 16.04
+```
+$ sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
+$ sudo apt-key adv --keyserver hkp://ha.pool.sks-keyservers.net:80 --recv-key 421C365BD9FF1F717815A3895523BAEEB01FA116
+```
+```
+$ sudo apt-get update
+```
+```
+$ sudo apt install ros-kinetic-desktop-full
+```
+```
+$ sudo rosdep init
+```
+```
+$ rosdep update
+```
 
 * System dependencies for Ubuntu 16.04 / Kinetic
 ```
@@ -45,13 +64,23 @@ $ sudo apt-get install libnccl-dev
 ```
 $ sudo reboot
 ```
+
+### 3. Setting variables of Operation Environment
+
+* After reboot
+```
+$ echo "source /opt/ros/kinetic/setup.bash" >> ~/.bashrc
+```
 * Set up the development environment by modifying the PATH and LD_LIBRARY_PATH variables, also add them to the end of .bashrc file:
 ```
 PATH=/usr/local/cuda-9.0/bin${PATH:+:${PATH}}
 LD_LIBRARY_PATH=/usr/local/cuda-9.0/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
 ```
+```
+$ source ~/.bashrc
+```
 
-### 3. install Autoware 1.12.0 with cuda on Ubuntu 16.04 (How to build For 1.12.0 and Newer)
+### 4. install Autoware 1.12.0 with cuda on Ubuntu 16.04 (How to build For 1.12.0 and Newer)
 
 * reference of install autoware: https://gitlab.com/autowarefoundation/autoware.ai/autoware/-/wikis/Source-Build
 
@@ -89,10 +118,11 @@ $ AUTOWARE_COMPILE_WITH_CUDA=1 colcon build --cmake-args -DCMAKE_BUILD_TYPE=Rele
 $ colcon build --cmake-args -DCMAKE_BUILD_TYPE=Release
 ```
 
-### 4. Run ROSBAG Demo of Autoware 1.12.0 with cuda on Ubuntu 16.04
+### 5. Run ROSBAG Demo of Autoware 1.12.0 with cuda on Ubuntu 16.04
 
 * reference of run autoware demo(1): https://gitlab.com/autowarefoundation/autoware.ai/autoware/-/wikis/ROSBAG-Demo
 * reference of run autoware demo(2): https://www.youtube.com/watch?v=OWwtr_71cqI&list=PLMV3EZ9zjNbIkOWvjaY2iU8LVC-pUQMOU&index=8
+* reference of run autoware demo(3): https://redisle.tistory.com/9?category=1052330 and https://redisle.tistory.com/9?category=1052330
 
 #### Demo data
 
