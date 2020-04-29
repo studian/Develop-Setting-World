@@ -43,3 +43,38 @@ LD_LIBRARY_PATH=/usr/local/cuda-9.0/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
 ```
 
 ### 3. install Autoware 1.12.0 with cuda on Ubuntu 16.04
+
+* How to build For 1.12.0 and Newer
+* Create a workspace
+```
+$ mkdir -p autoware.ai/src
+$ cd autoware.ai
+```
+* Download the workspace configuration for Autoware.AI. 
+* For the 1.12.0 release:
+```
+$ wget -O autoware.ai.repos "https://gitlab.com/autowarefoundation/autoware.ai/autoware/raw/1.12.0/autoware.ai.repos?inline=false"
+```
+  * For newer releases, replace 1.12.0 with the version you want to install.
+  * For the master version (bleeding edge):
+  ```
+  $ wget -O autoware.ai.repos "https://gitlab.com/autowarefoundation/autoware.ai/autoware/raw/master/autoware.ai.repos?inline=false"
+  ```
+* Download Autoware.AI into the workspace.
+```
+$ vcs import src < autoware.ai.repos
+```
+* Install dependencies using rosdep.
+```
+$ rosdep update
+$ rosdep install -y --from-paths src --ignore-src --rosdistro $ROS_DISTRO
+```
+* Compile the workspace
+* With CUDA support
+```
+$ AUTOWARE_COMPILE_WITH_CUDA=1 colcon build --cmake-args -DCMAKE_BUILD_TYPE=Release
+```
+  * Without CUDA Support
+  ```
+  $ colcon build --cmake-args -DCMAKE_BUILD_TYPE=Release
+  ```
